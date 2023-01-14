@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useCallback, useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
+
+import Menu from "./components/Menu";
+import Places from "./components/Places";
+import Types from "./components/Types";
+import Header from "./components/Header.js";
 
 function App() {
+  const [data, setData] = useState([]);
+
+  const fetchData = useCallback(async () => {
+    const response = await fetch(
+      `https://api.artic.edu/api/v1/artworks?limit=100`
+    );
+    const list = await response.json();
+    setData(list.data);
+  }, []);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Menu />} />
+        <Route path="/places" element={<Places />} />
+        <Route path="types" element={<Types />} />
+      </Routes>
+    </main>
   );
 }
 

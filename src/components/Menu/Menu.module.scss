@@ -1,0 +1,23 @@
+@use "../../styles/vars.scss";
+
+.navbar {
+  max-width: 40rem;
+  margin: 15rem auto 0rem;
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-box-align: center;
+    gap: 1rem;
+    list-style: none;
+    width: 100%;
+    li {
+      color: vars.$apricot;
+      font-size: vars.$fs-xxl;
+      border: 1px solid vars.$red;
+      border-radius: 0.3rem;
+      width: 100%;
+      padding: 0.75rem;
+    }
+  }
+}

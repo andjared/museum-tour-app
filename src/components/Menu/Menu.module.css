@@ -1,0 +1,21 @@
+.navbar {
+  max-width: 40rem;
+  margin: 15rem auto 0rem;
+}
+.navbar .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-box-align: center;
+  gap: 1rem;
+  list-style: none;
+  width: 100%;
+}
+.navbar .list li {
+  color: #e98074;
+  font-size: 2rem;
+  border: 1px solid #e85a4f;
+  border-radius: 0.3rem;
+  width: 100%;
+  padding: 0.75rem;
+}/*# sourceMappingURL=Menu.module.css.map */
