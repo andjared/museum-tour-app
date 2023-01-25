@@ -1,0 +1,42 @@
+@use "../../styles/vars.scss";
+
+.card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  border: 2px solid vars.$apricot;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    .image {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      img {
+        display: block;
+        max-width: 100%;
+        object-position: center center;
+      }
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 auto;
+    gap: 0.5rem;
+    font-size: vars.$fs-md;
+    text-align: center;
+  }
+}

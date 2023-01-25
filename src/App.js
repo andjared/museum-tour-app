@@ -1,14 +1,14 @@
 import "./App.css";
 import { useCallback, useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-
 import Menu from "./components/Menu";
 import Places from "./components/Places";
 import Types from "./components/Types";
-import Header from "./components/Header.js";
+import Header from "./components/Header";
 
 function App() {
   const [data, setData] = useState([]);
+  const [types, setTypes] = useState([]);
 
   const fetchData = useCallback(async () => {
     const response = await fetch(
@@ -28,7 +28,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Menu />} />
         <Route path="/places" element={<Places />} />
-        <Route path="types" element={<Types />} />
+        <Route
+          path="types"
+          element={<Types types={types} setTypes={setTypes} />}
+        />
       </Routes>
     </main>
   );

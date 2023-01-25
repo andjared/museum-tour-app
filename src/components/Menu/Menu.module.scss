@@ -12,12 +12,37 @@
     list-style: none;
     width: 100%;
     li {
+      position: relative;
       color: vars.$apricot;
       font-size: vars.$fs-xxl;
       border: 1px solid vars.$red;
       border-radius: 0.3rem;
       width: 100%;
-      padding: 0.75rem;
+      padding: 1rem 0.75rem;
+      cursor: pointer;
+      transition: color 200ms ease-in-out;
+      z-index: 1;
+      &:hover,
+      &:focus {
+        color: vars.$ligth-yellow;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: vars.$apricot;
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 300ms ease-in-out;
+      }
+      &:hover::before,
+      &:focus::before {
+        transform: scaleX(1);
+      }
     }
   }
 }
