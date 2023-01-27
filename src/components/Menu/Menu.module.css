@@ -12,10 +12,43 @@
   width: 100%;
 }
 .navbar .list li {
+  position: relative;
   color: #e98074;
   font-size: 2rem;
   border: 1px solid #e85a4f;
   border-radius: 0.3rem;
   width: 100%;
-  padding: 0.75rem;
+  padding: 1rem 0.75rem;
+  cursor: pointer;
+  transition: color 200ms ease-in-out;
+  z-index: 1;
+}
+.navbar .list li:hover, .navbar .list li:focus {
+  color: #eae7dc;
+}
+.navbar .list li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e98074;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease-in-out;
+}
+.navbar .list li:hover::before, .navbar .list li:focus::before {
+  transform: scaleX(1);
+}
+@media screen and (max-width: 760px) {
+  .navbar .list li {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 460px) {
+  .navbar .list li {
+    font-size: 1.5rem;
+  }
 }/*# sourceMappingURL=Menu.module.css.map */

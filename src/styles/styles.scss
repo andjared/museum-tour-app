@@ -36,8 +36,7 @@ main {
   position: relative;
   section {
     margin: 0px auto;
-    max-width: 50rem;
-    padding: 10rem 0rem;
+    padding: 5rem 0rem;
     @media screen and (max-width: 1080px) {
       padding: 8rem 0px 6rem;
     }
@@ -52,10 +51,27 @@ main {
       width: 100%;
       position: relative;
       margin: 10px 0px 40px;
-      // font-size: clamp(26px, 5vw, vars.$fs-heading);
       color: vars.$apricot;
       white-space: nowrap;
       line-height: 1.1;
+    }
+    .results {
+      max-width: 100rem;
+      padding: 1rem 0 3rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      .image {
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+      img {
+        display: block;
+        width: 100%;
+        // height: 25vh;
+        object-fit: cover;
+      }
     }
   }
 

@@ -7,7 +7,7 @@ const Menu = () => {
     <nav className={styles.navbar}>
       <ul className={styles.list}>
         <Link to="/types">
-          <li>Serch by Artwork Type</li>
+          <li>Search by Artwork Type</li>
         </Link>
         <Link to="/places">
           <li>Search By Place Of Origin</li>

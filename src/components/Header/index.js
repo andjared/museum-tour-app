@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Link to="/">
-        <img src={museumLogo} alt="Art Institute of Chicago" />{" "}
+        <img src={museumLogo} alt="Art Institute of Chicago" />
       </Link>
       <h1>Art Institute of Chicago</h1>
     </header>

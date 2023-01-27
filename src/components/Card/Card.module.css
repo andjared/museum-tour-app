@@ -1,0 +1,47 @@
+.card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid #e98074;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card .content img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-position: center center;
+     object-position: center center;
+}
+.card .content .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card .content .text h3 {
+  text-transform: capitalize;
+}
+.card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+@media screen and (max-width: 760px) {
+  .card .info {
+    font-size: 1.3rem;
+  }
+}/*# sourceMappingURL=Card.module.css.map */

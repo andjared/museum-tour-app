@@ -1,0 +1,41 @@
+@use "../../styles/vars.scss";
+
+.card {
+  padding: 1rem;
+  @include vars.flexCenter;
+  gap: 0.5rem;
+  border: 2px solid vars.$apricot;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    img {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-position: center center;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      h3 {
+        text-transform: capitalize;
+      }
+    }
+  }
+  .info {
+    @include vars.flexCenter;
+    flex: 1 0 auto;
+    gap: 0.5rem;
+    font-size: vars.$fs-md;
+    text-align: center;
+    @media screen and (max-width: 760px) {
+      font-size: vars.$fs-sm;
+    }
+  }
+}
