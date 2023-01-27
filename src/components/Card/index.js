@@ -28,7 +28,7 @@ const Card = ({ item }) => {
           />
 
           <div className={styles.text}>
-            <h3>{title}</h3>
+            <h3>{title.toLowerCase()}</h3>
             <h4>Artist: {artist_title || "unknown"}</h4>
           </div>
         </div>

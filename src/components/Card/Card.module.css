@@ -39,4 +39,9 @@
   gap: 0.5rem;
   font-size: 1.5rem;
   text-align: center;
+}
+@media screen and (max-width: 760px) {
+  .card .info {
+    font-size: 1.3rem;
+  }
 }/*# sourceMappingURL=Card.module.css.map */

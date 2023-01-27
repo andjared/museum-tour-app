@@ -9,4 +9,11 @@
   align-items: center;
   padding: 0.5rem 0.7rem;
   margin-top: 1rem;
+  gap: 0.5rem;
+  @media screen and (max-width: 760px) {
+    h1 {
+      text-align: right;
+      font-size: vars.$fs-md;
+    }
+  }
 }

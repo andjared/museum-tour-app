@@ -11,6 +11,16 @@
   gap: 0.5rem;
   place-content: center;
 }
+@media screen and (max-width: 760px) {
+  .types .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 420px) {
+  .types .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .types .list .type {
   position: relative;
   display: flex;

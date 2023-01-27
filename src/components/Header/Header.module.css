@@ -7,4 +7,11 @@
   align-items: center;
   padding: 0.5rem 0.7rem;
   margin-top: 1rem;
+  gap: 0.5rem;
+}
+@media screen and (max-width: 760px) {
+  .header h1 {
+    text-align: right;
+    font-size: 1.5rem;
+  }
 }/*# sourceMappingURL=Header.module.css.map */

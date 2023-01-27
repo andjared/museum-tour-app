@@ -41,4 +41,14 @@
 }
 .navbar .list li:hover::before, .navbar .list li:focus::before {
   transform: scaleX(1);
+}
+@media screen and (max-width: 760px) {
+  .navbar .list li {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 460px) {
+  .navbar .list li {
+    font-size: 1.5rem;
+  }
 }/*# sourceMappingURL=Menu.module.css.map */

@@ -18,7 +18,7 @@ const Filtered = ({ searchParam }) => {
   const getFilteredData = async (url) => {
     const response = await fetch(url);
     const data = await response.json();
-    setFilteredData((prev) => [data.data, ...prev]);
+    setFilteredData((prev) => [...prev, data.data]);
   };
 
   useEffect(() => {

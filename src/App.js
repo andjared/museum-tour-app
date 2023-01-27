@@ -31,7 +31,7 @@ function App() {
         <Route path="/" element={<Menu />} />
         <Route path="/places" element={<Places />} />
         <Route
-          path="types"
+          path="/types"
           element={
             <Types
               types={types}

@@ -34,5 +34,8 @@
     gap: 0.5rem;
     font-size: vars.$fs-md;
     text-align: center;
+    @media screen and (max-width: 760px) {
+      font-size: vars.$fs-sm;
+    }
   }
 }
