@@ -22,14 +22,10 @@ const Card = ({ item }) => {
     >
       {!isHovered ? (
         <div className={styles.content}>
-          <div className={styles.image}>
-            <img
-              width="640"
-              height="360"
-              src={`https://www.artic.edu/iiif/2/${image_id}/full/800,/0/default.jpg`}
-              alt=""
-            />
-          </div>
+          <img
+            src={`https://www.artic.edu/iiif/2/${image_id}/full/800,/0/default.jpg`}
+            alt={title}
+          />
 
           <div className={styles.text}>
             <h3>{title}</h3>

@@ -16,3 +16,9 @@ $font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
   system-ui, sans-serif;
 
 $transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+@mixin flexCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

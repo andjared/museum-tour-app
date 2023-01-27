@@ -1,11 +1,15 @@
 import React, { useEffect, useCallback, useState } from "react";
-import { Link } from "react-router-dom";
-import Card from "../Card";
-import Filtered from "../Filtered";
+import { useNavigate } from "react-router-dom";
+
 import styles from "./Types.module.scss";
 
-const Types = ({ types, setTypes }) => {
-  const [filtered, setFiltered] = useState([]);
+const Types = ({ types, setTypes, setSearchParam }) => {
+  const navigate = useNavigate();
+
+  const goToFiltered = (type) => {
+    setSearchParam(type);
+    navigate("/filtered");
+  };
 
   const getAllTypes = useCallback(async () => {
     const response = await fetch(
@@ -24,37 +28,19 @@ const Types = ({ types, setTypes }) => {
     return titles.sort();
   };
 
-  const searchByType = async (type) => {
-    const response = await fetch(
-      `https://api.artic.edu/api/v1/artworks/search?q=${type}`
-    );
-    const data = await response.json();
-    data.data.forEach((item) => getFilteredData(item.api_link));
-  };
-
-  const getFilteredData = async (url) => {
-    const response = await fetch(url);
-    const data = await response.json();
-    setFiltered((prev) => [...prev, data.data]);
-  };
-
   return (
     <section className={styles.types}>
       {types && (
-        <ul className={filtered.length ? styles.filtered : styles.list}>
-          {!filtered.length ? (
-            sortTitles().map((title, index) => (
-              <li
-                key={index}
-                onClick={() => searchByType(title)}
-                className={styles.type}
-              >
-                <div>{title}</div>
-              </li>
-            ))
-          ) : (
-            <Filtered filtered={filtered} path="types/filtered" />
-          )}
+        <ul className={styles.list}>
+          {sortTitles().map((title, index) => (
+            <li
+              key={index}
+              onClick={() => goToFiltered(title)}
+              className={styles.type}
+            >
+              {title}
+            </li>
+          ))}
         </ul>
       )}
     </section>

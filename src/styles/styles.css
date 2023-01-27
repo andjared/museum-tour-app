@@ -35,7 +35,6 @@ main {
 }
 main section {
   margin: 0px auto;
-  max-width: 50rem;
   padding: 5rem 0rem;
 }
 @media screen and (max-width: 1080px) {
@@ -58,6 +57,24 @@ main section h2 {
   color: #e98074;
   white-space: nowrap;
   line-height: 1.1;
+}
+main section .results {
+  max-width: 100rem;
+  padding: 1rem 0 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+main section .results .image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+main section .results img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main button {
   border: 0px;
